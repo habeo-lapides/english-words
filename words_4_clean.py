@@ -1,4 +1,4 @@
-with open('words_4.txt', 'r') as file:
+with open('filtered_words_no_s.txt', 'r') as file:
     # Read all the lines from the file
     lines = file.readlines()
 
@@ -13,10 +13,10 @@ for line in lines:
     # Iterate over each word
     for word in words:
         # Check if the word has between 4 and 8 characters (inclusive)
-        if 4 <= len(word) <= 8:
+        if 4 <= len(word) <= 6:
             filtered_words.append(word)
 
 # Open the output file for writing
-with open('filtered_words.txt', 'w') as file:
+with open('filtered_words_no_s_4-6.txt', 'w') as file:
     # Write the filtered words to the output file
     file.write(' '.join(filtered_words))
